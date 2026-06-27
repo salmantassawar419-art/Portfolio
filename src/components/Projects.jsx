@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { projects } from '../data/config';
 import { useScrollReveal } from '../hooks';
 
-const FILTERS = ['All', 'React', 'Next.js', 'WordPress', 'Full Stack', 'UI Design'];
-
+const FILTERS = ['All', 'Full Stack', 'E-Commerce', 'Graphic Design', 'Shopify'];
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [ref, visible] = useScrollReveal();

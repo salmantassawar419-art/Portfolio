@@ -4,22 +4,22 @@
 // ============================================================
 
 export const personalInfo = {
-  name: "Alex Morgan",
-  title: "Full Stack Developer & UI/UX Designer",
+  name: "SALMAN",
+  title: "Full-Stack Developer | Digital Marketing & E-Commerce Expert",
   tagline: "Building Digital Experiences That Matter",
-  email: "alex@example.com",
-  phone: "+1 (555) 123-4567",
-  whatsapp: "+15551234567",
-  address: "San Francisco, CA, USA",
-  bio: "I'm a passionate Full Stack Developer with 5+ years of experience crafting high-performance web applications. I specialize in React, Next.js, and Node.js, delivering pixel-perfect designs and scalable architectures for clients worldwide.",
-  profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+  email: "salmantassawar419@gmail.com",
+  phone: "+923137141907",
+  whatsapp: "+923137141907",
+  address: "Islamabad, Pakistan",
+  bio: " I help businesses build, grow, and scale their online presence through modern web development, SEO, e-commerce solutions, Meta Ads, and creative branding. Delivering innovative digital experiences that drive real business growth and long-term success.",
+  profileImage: "/images/mypic.png",
   resumeUrl: "#",
   typingTexts: [
     "Full Stack Developer",
-    "React Specialist",
+    "Digital Marketing Specialist",
+    "E-Commerce Expert",
     "UI/UX Designer",
-    "Next.js Expert",
-    "API Architect",
+    "SEO & SEM Strategist",
   ],
 };
 
@@ -30,60 +30,54 @@ export const socialLinks = {
   instagram: "https://instagram.com",
   twitter: "https://twitter.com",
   youtube: "https://youtube.com",
-  email: "mailto:alex@example.com",
-  whatsapp: "https://wa.me/15551234567?text=Hello%2C%20I%20visited%20your%20portfolio%20website%20and%20I%20want%20to%20discuss%20my%20project.",
+  email: "mailto:salmantassawar419@gmail.com",
+  whatsapp: "https://wa.me/923137141907?text=Hello%2C%20I%20visited%20your%20portfolio%20website%20and%20I%20want%20to%20discuss%20my%20project.",
 };
 
 export const skills = [
-  { name: "React / Next.js", level: 95, color: "#61DAFB" },
-  { name: "JavaScript / TypeScript", level: 92, color: "#F7DF1E" },
-  { name: "Node.js / Express", level: 88, color: "#68A063" },
-  { name: "UI/UX Design", level: 85, color: "#A855F7" },
-  { name: "MongoDB / PostgreSQL", level: 82, color: "#47A248" },
-  { name: "Docker / AWS", level: 78, color: "#2496ED" },
+  { name: "Web Development", level: 95, color: "#61DAFB" },
+  { name: "E-Commerce Solutions", level: 92, color: "#F7DF1E" },
+  { name: "SEO Optimization", level: 88, color: "#68A063" },
+  { name: "Meta Ads", level: 85, color: "#A855F7" },
+  { name: "UI/UX Design", level: 82, color: "#47A248" },
+  { name: "Graphic Designing", level: 78, color: "#2496ED" },
 ];
 
 export const experience = [
   {
-    role: "Senior Full Stack Developer",
-    company: "TechCorp Inc.",
-    duration: "2022 – Present",
-    description: "Leading development of enterprise-grade React applications serving 100k+ users. Architecting microservices and mentoring junior developers.",
+    role: "Full Stack Developer",
+    company: "Freelance / Nexa Studio",
+    duration: "2025 – Present",
+    description: "Developing fast, responsive, and SEO-friendly websites using modern technologies. I specialize in creating business websites, landing pages, portfolio websites, and custom web applications with a strong focus on performance, user experience, and scalability.",
   },
   {
-    role: "Frontend Developer",
-    company: "DigitalWave Agency",
-    duration: "2020 – 2022",
-    description: "Built 30+ client websites using React and Next.js. Improved page performance scores by 40% and reduced bounce rates significantly.",
+    role: "E-Commerce & Digital Marketing Consultant",
+    company: "Freelance / Nexa Studio",
+    duration: "2025 – Present",
+    description: "Helping businesses launch and grow their online stores through Shopify development, Amazon, eBay, and Temu account management, product listing optimization, Meta Ads campaigns, and digital growth strategies that increase visibility, traffic, and sales.",
   },
   {
-    role: "Junior Web Developer",
-    company: "StartupHub",
-    duration: "2019 – 2020",
-    description: "Developed responsive websites and internal tools. Worked closely with designers to implement pixel-perfect UI components.",
+    role: "Graphic Designer & Branding Specialist",
+    company: "Freelance / Nexa Studio",
+    duration: "2025 – Present",
+    description: "Designing visually compelling graphics that help businesses build a strong and memorable brand identity. I create modern, creative, and impactful designs for digital marketing, social media, advertising, and business branding while ensuring consistency, professionalism, and user engagement.",
   },
 ];
 
 export const education = [
   {
-    degree: "B.Sc. Computer Science",
-    institution: "MIT",
-    year: "2019",
-    grade: "3.9 GPA",
+    degree: "BS. Data Science",
+    year: " Started in 2025",
+    grade: "3.8 GPA",
   },
-  {
-    degree: "Full Stack Bootcamp",
-    institution: "Codecademy Pro",
-    year: "2019",
-    grade: "Distinction",
-  },
+ 
 ];
 
 export const certifications = [
-  "AWS Certified Developer – Associate",
-  "Google UX Design Certificate",
-  "Meta React Developer Certificate",
-  "MongoDB Associate Developer",
+  "Full Stack Web Development Certificate",
+  "Digital Marketing Certificate",
+  "E-Commerce Solutions Certificate",
+  "Graphic Designer Certificate",
 ];
 
 export const services = [
@@ -98,30 +92,21 @@ export const services = [
     description: "Pixel-perfect interfaces with Figma, Tailwind CSS, and Framer Motion. Designed for conversion and delight.",
   },
   {
-    icon: "⚡",
-    title: "React Development",
-    description: "High-performance SPAs and component libraries. Custom hooks, context, and state management expertise.",
+    icon: "🛒",
+    title: "E-Commerce Solutions",
+    description: "Launch, manage, and grow your online business with Shopify, Amazon, eBay, and Temu. From store setup and account handling. We provide complete e-commerce solutions.",
   },
   {
     icon: "🚀",
-    title: "Next.js Development",
-    description: "SEO-optimized, server-side rendered apps with App Router, ISR, and edge-ready deployments.",
+    title: "Meta Ads & Digital Marketing",
+    description: "Run high-converting Facebook and Instagram advertising campaigns that generate leads and increase sales.",
   },
   {
-    icon: "🔌",
-    title: "API Development",
-    description: "REST and GraphQL APIs with authentication, rate limiting, and comprehensive documentation.",
+    icon: "✍️",
+    title: "Content Writing",
+    description: "Engaging, SEO-optimized content for websites, blogs, landing pages, and product descriptions.",
   },
-  {
-    icon: "🤖",
-    title: "AI Integration",
-    description: "LLM-powered features, chatbots, and smart automation built into your product using OpenAI and Anthropic APIs.",
-  },
-  {
-    icon: "🛒",
-    title: "WordPress Development",
-    description: "Custom themes, plugins, and WooCommerce stores. Fast, secure, and easy to manage.",
-  },
+ 
   {
     icon: "📈",
     title: "SEO Optimization",
@@ -132,50 +117,51 @@ export const services = [
     title: "Website Maintenance",
     description: "Ongoing support, security patches, performance monitoring, and feature additions for your live product.",
   },
-  {
-    icon: "☁️",
-    title: "Cloud & DevOps",
-    description: "CI/CD pipelines, Docker containerization, and AWS deployments for zero-downtime production systems.",
+   {
+    icon: "🔌",
+    title: "API Development",
+    description: "REST and GraphQL APIs with authentication, rate limiting, and comprehensive documentation.",
   },
+ 
 ];
 
 export const team = [
   {
-    name: "Alex Morgan",
-    role: "Lead Developer & Founder",
-    bio: "Full Stack specialist with 5+ years building world-class web products.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-    skills: ["React", "Next.js", "Node.js"],
+    name: "SALMAN",
+    role: "Lead Developer | E-Commerce Specialist & Founder of Nexa Studio",
+    bio: "Helping businesses grow through modern web development, SEO, e-commerce solutions, Meta Ads, and creative branding with scalable digital strategies.",
+    image: "/images/mypic.png",
+    skills: ["React", "Node.js", "Next.js", "Shopify", "Amazon ","eBay"],
     linkedin: "https://linkedin.com",
     github: "https://github.com",
-    whatsapp: "https://wa.me/15551234567",
+    whatsapp: "https://wa.me/9231317141907",
   },
   {
-    name: "Sarah Chen",
-    role: "UI/UX Designer",
-    bio: "Design systems expert who turns complex problems into elegant interfaces.",
+    name: "Sarah",
+    role: "UI/UX Designer & Front-End Developer",
+    bio: "Designing intuitive and user-friendly interfaces that combine creativity, functionality, and seamless experiences for modern web and mobile applications.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face",
-    skills: ["Figma", "Tailwind", "Motion"],
+    skills: ["Figma", "Tailwind", "Framer Motion" , "Wireframing"],
     linkedin: "https://linkedin.com",
     github: "https://github.com",
     whatsapp: "https://wa.me/15551234568",
   },
   {
-    name: "James Rivera",
-    role: "Backend Engineer",
-    bio: "API and infrastructure architect passionate about scalable systems.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
-    skills: ["Node.js", "AWS", "Docker"],
+    name: "Dawood",
+    role: "Digital Marketing & Growth Strategist",
+    bio: "Driving business growth through SEO, Meta Ads, analytics, and data-driven marketing strategies that maximize online visibility and conversions.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/051/498/303/small/social-media-chatting-online-default-male-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg",
+    skills: ["Meta Ads", "SEO", "Analytics", "Content Strategy",],
     linkedin: "https://linkedin.com",
     github: "https://github.com",
     whatsapp: "https://wa.me/15551234569",
   },
   {
-    name: "Priya Patel",
-    role: "React Specialist",
-    bio: "Component library builder and performance optimization enthusiast.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face",
-    skills: ["React", "TypeScript", "Testing"],
+    name: "Wajih ud Din",
+    role: "Graphic Designer & Branding Specialist",
+    bio: "Creating impactful visual identities, marketing assets, and brand designs that help businesses build recognition and leave lasting impressions.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/051/498/303/small/social-media-chatting-online-default-male-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg",
+    skills: ["Figma", "Adobe Creative Suite", "Canva","Brand Strategy"],
     linkedin: "https://linkedin.com",
     github: "https://github.com",
     whatsapp: "https://wa.me/15551234570",
@@ -183,103 +169,120 @@ export const team = [
 ];
 
 export const projects = [
+  // Full Stack (3)
   {
-    title: "SaaS Analytics Dashboard",
-    description: "Real-time analytics platform with customizable widgets, role-based access, and AI-powered insights for enterprise teams.",
+    title: "React Admin Dashboard",
+    description: "Full stack admin panel with real-time charts, user management, role-based access control and REST API backend built with Node.js and MongoDB.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    tech: ["React", "TypeScript", "Node.js", "MongoDB"],
+    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     category: "Full Stack",
     demo: "#",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
-    description: "High-converting online store with advanced filtering, cart, Stripe payments, and admin panel built with Next.js.",
+    title: "Next.js E-Commerce Platform",
+    description: "Full stack online store with product management, Stripe payments, order tracking, admin panel and server-side rendering for maximum SEO performance.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    category: "Next.js",
-    demo: "#",
-    github: "#",
-  },
-  {
-    title: "AI Chat Application",
-    description: "GPT-powered chat interface with conversation history, file uploads, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1676299081847-824916de030a?w=600&h=400&fit=crop",
-    tech: ["React", "OpenAI API", "Firebase", "Tailwind"],
-    category: "React",
-    demo: "#",
-    github: "#",
-  },
-  {
-    title: "Real Estate Platform",
-    description: "Property listing site with map integration, virtual tours, mortgage calculator, and lead capture system.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    tech: ["Next.js", "Google Maps", "Prisma", "AWS"],
+    tech: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
     category: "Full Stack",
     demo: "#",
     github: "#",
   },
   {
-    title: "Creative Agency Site",
-    description: "Award-winning agency portfolio with GSAP animations, 3D effects, and a headless CMS for easy content updates.",
+    title: "Business Management System",
+    description: "Complete business management web app with invoice generation, client tracking, expense reports, employee management and real-time analytics.",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    tech: ["React", "GSAP", "Three.js", "Contentful"],
-    category: "UI Design",
-    demo: "#",
-    github: "#",
-  },
-  {
-    title: "Healthcare Portal",
-    description: "HIPAA-compliant patient management system with appointment scheduling, telemedicine, and electronic records.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-    tech: ["React", "Node.js", "PostgreSQL", "Docker"],
+    tech: ["React", "Express.js", "MongoDB", "Node.js"],
     category: "Full Stack",
     demo: "#",
     github: "#",
   },
+
+  // Amazon Account Handling (2)
   {
-    title: "WordPress Agency Theme",
-    description: "Premium multipurpose WordPress theme with Elementor integration, 20+ demo sites, and WooCommerce support.",
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&h=400&fit=crop",
-    tech: ["WordPress", "PHP", "WooCommerce", "ACF"],
-    category: "WordPress",
+    title: "Amazon FBA Store Management",
+    description: "Complete Amazon FBA account setup and management with product research, listing optimization, PPC campaigns and inventory planning that grew sales by 240%.",
+    image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=600&h=400&fit=crop",
+    tech: ["Amazon", "SEO", "Google Analytics", "Search Console"],
+    category: "E-Commerce",
     demo: "#",
     github: "#",
   },
   {
-    title: "Food Delivery App UI",
-    description: "Mobile-first food ordering interface with real-time tracking, reviews, and a restaurant dashboard.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop",
-    tech: ["Figma", "React Native", "Tailwind", "Firebase"],
-    category: "UI Design",
+    title: "Amazon Private Label Launch",
+    description: "Launched a private label product on Amazon from scratch including product research, supplier sourcing, keyword ranking, A+ content and review strategy.",
+    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=600&h=400&fit=crop",
+    tech: ["Amazon", "SEO", "Canva", "Google Analytics"],
+    category: "E-Commerce",
+    demo: "#",
+    github: "#",
+  },
+
+  // Graphic Design (1)
+  {
+    title: "Brand Identity Design",
+    description: "Complete brand identity package with logo, color palette, typography system, business card, letterhead and brand guidelines for a tech startup.",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop",
+    tech: ["Illustrator", "Photoshop", "Figma", "Canva"],
+    category: "Graphic Design",
+    demo: "#",
+    github: "#",
+  },
+
+  // Shopify (1)
+  {
+    title: "Shopify Fashion Store",
+    description: "Complete Shopify dropshipping store with custom theme, winning product pages, upsell funnels, abandoned cart recovery and Meta Ads integration.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+    tech: ["Shopify", "JavaScript", "Canva", "Meta Ads"],
+    category: "Shopify",
     demo: "#",
     github: "#",
   },
 ];
 
 export const techStack = [
-  { name: "HTML5", icon: "🌐", color: "#E34F26" },
-  { name: "CSS3", icon: "🎨", color: "#1572B6" },
-  { name: "JavaScript", icon: "⚡", color: "#F7DF1E" },
-  { name: "TypeScript", icon: "📘", color: "#3178C6" },
-  { name: "React", icon: "⚛️", color: "#61DAFB" },
-  { name: "Next.js", icon: "▲", color: "#ffffff" },
-  { name: "Node.js", icon: "🟢", color: "#68A063" },
-  { name: "Express", icon: "🚂", color: "#ffffff" },
-  { name: "MongoDB", icon: "🍃", color: "#47A248" },
-  { name: "Firebase", icon: "🔥", color: "#FFCA28" },
-  { name: "Tailwind", icon: "💨", color: "#38B2AC" },
-  { name: "Bootstrap", icon: "🅱️", color: "#7952B3" },
-  { name: "Git", icon: "📋", color: "#F05032" },
-  { name: "Docker", icon: "🐳", color: "#2496ED" },
-  { name: "AWS", icon: "☁️", color: "#FF9900" },
-  { name: "PostgreSQL", icon: "🐘", color: "#336791" },
+  // Development
+  { name: "React", icon: "⚛️", color: "#61DAFB", category: "Development" },
+  { name: "Next.js", icon: "▲", color: "#ffffff", category: "Development" },
+  { name: "Node.js", icon: "🟢", color: "#68A063", category: "Development" },
+  { name: "Express.js", icon: "🚀", color: "#ffffff", category: "Development" },
+  { name: "MongoDB", icon: "🍃", color: "#47A248", category: "Development" },
+  { name: "JavaScript", icon: "🟨", color: "#F7DF1E", category: "Development" },
+  { name: "HTML5", icon: "🌐", color: "#E34F26", category: "Development" },
+  { name: "Tailwind CSS", icon: "🎨", color: "#38B2AC", category: "Development" },
+
+  // E-Commerce
+  { name: "Shopify", icon: "🛍", color: "#96BF48", category: "E-Commerce" },
+  { name: "WooCommerce", icon: "🛒", color: "#7F54B3", category: "E-Commerce" },
+  { name: "Amazon", icon: "📦", color: "#FF9900", category: "E-Commerce" },
+  { name: "eBay", icon: "🏷", color: "#E53238", category: "E-Commerce" },
+  { name: "Temu", icon: "🛍", color: "#FF6B35", category: "E-Commerce" },
+
+  // Marketing
+  { name: "SEO", icon: "📈", color: "#34A853", category: "Marketing" },
+  { name: "Meta Ads", icon: "📢", color: "#1877F2", category: "Marketing" },
+  { name: "Google Analytics", icon: "📊", color: "#E37400", category: "Marketing" },
+  { name: "Search Console", icon: "🔍", color: "#4285F4", category: "Marketing" },
+
+  // Design
+  { name: "Photoshop", icon: "🎨", color: "#31A8FF", category: "Design" },
+  { name: "Illustrator", icon: "🖌", color: "#FF9A00", category: "Design" },
+  { name: "Canva", icon: "🎭", color: "#00C4CC", category: "Design" },
+  { name: "Figma", icon: "🎯", color: "#F24E1E", category: "Design" },
+
+  // Tools
+  { name: "Git", icon: "🐙", color: "#F05032", category: "Tools" },
+  { name: "GitHub", icon: "⚡", color: "#ffffff", category: "Tools" },
+  { name: "VS Code", icon: "💻", color: "#007ACC", category: "Tools" },
+  { name: "Postman", icon: "📮", color: "#FF6C37", category: "Tools" },
+  { name: "Vercel", icon: "▲", color: "#ffffff", category: "Tools" },
 ];
 
 export const stats = [
   { label: "Projects Completed", value: 120, suffix: "+" },
   { label: "Happy Clients", value: 85, suffix: "+" },
-  { label: "Years Experience", value: 5, suffix: "+" },
+  { label: "Years Experience", value: 2, suffix: "+" },
   { label: "Team Members", value: 4, suffix: "" },
   { label: "Positive Reviews", value: 98, suffix: "%" },
 ];
@@ -289,7 +292,7 @@ export const testimonials = [
     name: "Michael Thompson",
     company: "CEO, TechStart Inc.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-    review: "Alex and the team delivered our platform ahead of schedule. The code quality, UI polish, and post-launch support were exceptional. Our users love the new experience.",
+    review: "SALMAN and the team delivered our platform ahead of schedule. The code quality, UI polish, and post-launch support were exceptional. Our users love the new experience.",
     rating: 5,
   },
   {
@@ -303,7 +306,7 @@ export const testimonials = [
     name: "David Osei",
     company: "Founder, HealthPath",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
-    review: "Complex healthcare compliance requirements, tight deadline, and a tricky integration with our legacy system. Alex handled all of it professionally. Truly impressive work.",
+    review: "Complex healthcare compliance requirements, tight deadline, and a tricky integration with our legacy system. SALMAN handled all of it professionally. Truly impressive work.",
     rating: 5,
   },
   {
@@ -316,10 +319,10 @@ export const testimonials = [
 ];
 
 export const seo = {
-  title: "Alex Morgan – Full Stack Developer & UI/UX Designer",
-  description: "Premium Full Stack Developer specializing in React, Next.js, and Node.js. Building high-performance web applications, beautiful UI/UX, and scalable digital products.",
-  keywords: "full stack developer, react developer, next.js developer, UI/UX designer, web development, frontend developer, backend developer, node.js, TypeScript",
-  author: "Alex Morgan",
-  ogImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop",
-  siteUrl: "https://alexmorgan.dev",
+  title: "SALMAN – Full Stack Developer | Digital Marketing Specialist & E-Commerce Expert",
+  description: "I provide end-to-end digital solutions for startups, entrepreneurs, and businesses. Whether you need a professional website, better Google rankings, a successful e-commerce store, creative branding, or performance-driven marketing campaigns, I'm here to help you achieve measurable results.",
+  keywords: "Full-Stack Web Developer, SEO Expert, Website Developer, React Developer, Next.js Developer, MERN Stack Developer, Shopify Developer, Amazon Virtual Assistant, eBay Management, Temu Seller Management, Meta Ads Expert, Facebook Ads, Instagram Ads, Graphic Designer, Digital Marketing Consultant, Business Website Development, E-Commerce Solutions, SEO Services, Online Store Optimization, Web Application Development, UI/UX Design, Branding Specialist, Freelance Developer, Web Development Services, Digital Growth Strategies",
+  author: "SALMAN",
+  ogImage: "/images/WhatsApp Image 2026-04-24 at 11.53.10 PM.jpeg",
+  siteUrl: "https://nexa.studio",
 };

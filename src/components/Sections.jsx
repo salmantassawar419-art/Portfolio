@@ -12,10 +12,11 @@ export function Team() {
         <div className="section-header" ref={ref}>
           <div className={`reveal ${visible ? 'visible' : ''}`}>
             <span className="section-eyebrow">The People</span>
-            <h2 className="section-title">Meet the <span>Team</span></h2>
+            <h2 className="section-title">Meet My <span>Team</span></h2>
             <div className="divider" />
-            <p className="section-subtitle">A small, focused team with deep expertise across the full stack.</p>
-          </div>
+<p className="section-subtitle">
+  A passionate team of specialists in web development, e-commerce, digital marketing, Meta Ads and graphic design — working together to grow your business.
+</p>          </div>
         </div>
 
         <div className="team-grid" role="list">
@@ -26,12 +27,19 @@ export function Team() {
       </div>
 
       <style>{`
-        .team-section { background: var(--bg-primary); }
-        .team-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-          gap: 24px;
-        }
+       .team-section { background: var(--bg-primary); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* ← 4 equal columns */
+  gap: 24px;
+  align-items: stretch;                    /* ← all cards same height */
+}
+@media (max-width: 1024px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
       `}</style>
     </section>
   );
@@ -58,28 +66,89 @@ function TeamCard({ member, index }) {
         <div className="team-skills">
           {member.skills.map(s => <span className="tag" key={s}>{s}</span>)}
         </div>
-        <div className="team-actions">
-          <a href={member.linkedin} className="team-btn" target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`}>🔗</a>
-          <a href={member.github} className="team-btn" target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on GitHub`}>💻</a>
-          <a href={member.whatsapp} className="team-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label={`Message ${member.name} on WhatsApp`}>💬 WhatsApp</a>
-        </div>
-      </div>
+<div className="team-actions">
+  <a href={member.linkedin} className="team-btn" target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  </a>
+  <a href={member.github} className="team-btn" target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on GitHub`}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    </svg>
+  </a>
+  <a href={member.whatsapp} className="team-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label={`Message ${member.name} on WhatsApp`}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.523 5.832L0 24l6.335-1.506C8.05 23.45 9.989 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.897 0-3.673-.505-5.197-1.385l-.373-.22-3.867.919.955-3.765-.244-.393C2.509 15.66 2 13.888 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    WhatsApp
+  </a>
+</div>      </div>
 
       <style>{`
-        .team-card { overflow: hidden; padding: 0; }
-        .team-img-wrap { position: relative; aspect-ratio: 1; overflow: hidden; }
-        .team-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .team-card:hover .team-img { transform: scale(1.05); }
-        .team-img-overlay {
-          position: absolute; inset: 0;
-          background: linear-gradient(to bottom, transparent 50%, var(--bg-card) 100%);
-        }
-        .team-body { padding: 20px; }
-        .team-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
-        .team-role { font-size: 0.82rem; font-weight: 600; margin-bottom: 10px; }
-        .team-bio { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
-        .team-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-        .team-actions { display: flex; gap: 8px; align-items: center; }
+.team-card {
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.team-img-wrap {
+  position: relative;
+  height: 280px;                  /* ← fixed equal height for all images */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;    /* ← show face from top */
+  transition: transform 0.5s ease;
+}
+.team-card:hover .team-img { transform: scale(1.05); }
+.team-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, var(--bg-card) 100%);
+}
+.team-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;                        /* ← stretches body to fill remaining space */
+}
+.team-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.team-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.team-bio {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex: 1;                        /* ← pushes skills + buttons to bottom */
+}
+.team-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.team-actions {
+  margin-top: auto;               /* ← pins buttons to bottom of every card */
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}        
         .team-btn {
           width: 36px; height: 36px;
           border-radius: 50%;
@@ -192,6 +261,8 @@ function StatItem({ stat, index }) {
 export function TechStack() {
   const [ref, visible] = useScrollReveal();
 
+  const categories = [...new Set(techStack.map(t => t.category))];
+
   return (
     <section className="section tech-section" aria-label="Technologies used">
       <div className="container">
@@ -203,19 +274,37 @@ export function TechStack() {
           </div>
         </div>
 
-        <div className="tech-grid" role="list">
-          {techStack.map((tech, i) => (
-            <TechItem key={tech.name} tech={tech} index={i} />
-          ))}
-        </div>
+        {categories.map(category => (
+          <div key={category} className="tech-category">
+            <h3 className="tech-category-label">{category}</h3>
+            <div className="tech-grid" role="list">
+              {techStack
+                .filter(t => t.category === category)
+                .map((tech, i) => (
+                  <TechItem key={tech.name} tech={tech} index={i} />
+                ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <style>{`
         .tech-section { background: var(--bg-primary); }
+        .tech-category { margin-bottom: 40px; }
+        .tech-category-label {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          font-weight: 700;
+          color: var(--accent-purple);
+          margin-bottom: 16px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid var(--border);
+        }
         .tech-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-          gap: 16px;
+          grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+          gap: 14px;
         }
       `}</style>
     </section>

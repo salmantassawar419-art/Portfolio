@@ -18,9 +18,9 @@ export default function PageLoader() {
       <div className="loader-inner">
         <div className="loader-logo">
           <span className="loader-bracket">&lt;</span>
-          <span className="loader-name gradient-text">Alex</span>
+          <span className="loader-name gradient-text">Nexa</span>
           <span className="loader-dot" style={{ color: 'var(--accent-purple)' }}>.</span>
-          <span className="loader-dev gradient-text">dev</span>
+          <span className="loader-dev gradient-text">Studio</span>
           <span className="loader-bracket">/&gt;</span>
         </div>
         <div className="loader-bar-wrap">

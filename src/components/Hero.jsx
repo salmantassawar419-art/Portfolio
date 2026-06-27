@@ -2,12 +2,66 @@ import { useState, useEffect, useRef } from 'react';
 import { personalInfo, socialLinks } from '../data/config';
 
 const SOCIAL_ICONS = [
-  { key: 'linkedin', label: 'LinkedIn', icon: '🔗' },
-  { key: 'github', label: 'GitHub', icon: '💻' },
-  { key: 'twitter', label: 'Twitter/X', icon: '𝕏' },
-  { key: 'instagram', label: 'Instagram', icon: '📸' },
+  {
+    key: 'linkedin',
+    label: 'LinkedIn',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    ),
+  },
+  {
+    key: 'github',
+    label: 'GitHub',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+      </svg>
+    ),
+  },
+  {
+    key: 'instagram',
+    label: 'Instagram',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    ),
+  },
+  {
+    key: 'twitter',
+    label: 'Twitter/X',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    ),
+  },
+  {
+    key: 'facebook',
+    label: 'Facebook',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    ),
+  },
+  {
+    key: 'whatsapp',
+    label: 'WhatsApp',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.107 1.523 5.832L0 24l6.335-1.506C8.05 23.45 9.989 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.897 0-3.673-.505-5.197-1.385l-.373-.22-3.867.919.955-3.765-.244-.393C2.509 15.66 2 13.888 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    ),
+  },
 ];
-
 function TypingText({ texts }) {
   const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
@@ -103,7 +157,7 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge reveal">
             <span className="badge-dot" aria-hidden="true" />
-            Available for freelance work
+            Available for New Projects.
           </div>
 
           <h1 className="hero-heading reveal">
@@ -118,20 +172,34 @@ export default function Hero() {
             {personalInfo.bio}
           </p>
 
-          <div className="hero-actions reveal">
-            <a href={`mailto:${personalInfo.email}`} className="btn btn-primary">
-              <span>✉️</span> Hire Me
-            </a>
-            <button
-              className="btn btn-outline"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <span>🚀</span> View Projects
-            </button>
-            <a href={personalInfo.resumeUrl} className="btn btn-ghost" download aria-label="Download CV">
-              <span>📄</span> CV
-            </a>
-          </div>
+       <div className="hero-actions reveal">
+  <a href={`mailto:${personalInfo.email}`} className="btn btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    Hire Me
+  </a>
+  <button
+    className="btn btn-outline"
+    onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+    View Projects
+  </button>
+  <a href={personalInfo.resumeUrl} className="btn btn-ghost" download aria-label="Download CV">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+      <polyline points="10 9 9 9 8 9"/>
+    </svg>
+    Download CV
+  </a>
+</div>
 
           <div className="hero-socials reveal" role="list" aria-label="Social links">
             {SOCIAL_ICONS.map(s => (
@@ -167,7 +235,7 @@ export default function Hero() {
 
             {/* Floating badges */}
             <div className="floating-badge badge-exp" aria-label="Years of experience">
-              <span className="badge-num gradient-text">5+</span>
+              <span className="badge-num gradient-text">2+</span>
               <span className="badge-text">Years Exp.</span>
             </div>
             <div className="floating-badge badge-projects" aria-label="Projects completed">
@@ -355,13 +423,14 @@ export default function Hero() {
           animation-direction: reverse;
         }
         .hero-image {
-          width: 100%; height: 100%;
-          object-fit: cover;
-          border-radius: 50%;
-          position: relative;
-          z-index: 1;
-          border: 3px solid rgba(139,92,246,0.4);
-        }
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;   /* ← shows face + body, not center */
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  border: 3px solid rgba(139,92,246,0.4);
+}
         .hero-image-glow {
           position: absolute;
           inset: -20px;

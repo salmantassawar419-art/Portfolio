@@ -66,14 +66,48 @@ export default function About() {
               <div className="about-img-decoration" aria-hidden="true" />
             </div>
 
-            <div className="personal-info-grid" role="list">
-              {[
-                { label: 'Email', value: personalInfo.email, icon: '✉️' },
-                { label: 'Phone', value: personalInfo.phone, icon: '📞' },
-                { label: 'Location', value: personalInfo.address, icon: '📍' },
-                { label: 'Status', value: 'Open to Work', icon: '✅' },
-              ].map(item => (
-                <div className="info-item glass-card" key={item.label} role="listitem">
+<div className="personal-info-grid" role="list">
+  {[
+    {
+      label: 'Email',
+      value: personalInfo.email,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      ),
+    },
+    {
+      label: 'Phone',
+      value: personalInfo.phone,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>
+        </svg>
+      ),
+    },
+    {
+      label: 'Location',
+      value: personalInfo.address,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      ),
+    },
+    {
+      label: 'Status',
+      value: 'Open to Work',
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      ),
+    },
+  ].map(item => (                <div className="info-item glass-card" key={item.label} role="listitem">
                   <span className="info-icon" aria-hidden="true">{item.icon}</span>
                   <div>
                     <span className="info-label">{item.label}</span>
@@ -140,9 +174,16 @@ export default function About() {
               ))}
             </div>
 
-            <a href={personalInfo.resumeUrl} className="btn btn-primary" style={{ marginTop: 32, width: 'fit-content' }} download>
-              📄 Download Full CV
-            </a>
+           <a href={personalInfo.resumeUrl} className="btn btn-primary" style={{ marginTop: 32, width: 'fit-content' }} download>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="12" y1="18" x2="12" y2="12"/>
+    <line x1="9" y1="15" x2="12" y2="18"/>
+    <line x1="15" y1="15" x2="12" y2="18"/>
+  </svg>
+  Download Full CV
+</a>
           </div>
         </div>
       </div>
@@ -156,19 +197,21 @@ export default function About() {
           align-items: start;
         }
         .about-image-container {
-          position: relative;
-          border-radius: var(--radius-lg);
-          overflow: visible;
-          margin-bottom: 24px;
-        }
-        .about-img {
-          width: 100%;
-          height: 380px;
-          object-fit: cover;
-          border-radius: var(--radius-lg);
-          position: relative;
-          z-index: 1;
-        }
+  position: relative;
+  border-radius: 24px;
+  overflow: visible;
+  margin-bottom: 24px;
+  max-height: 500px;              /* ← controls max height */
+}
+       .about-img {
+  width: 100%;
+  height: 460px;                  /* ← taller to show full body */
+  object-fit: cover;
+  object-position: center top;    /* ← shows face + body from top */
+  border-radius: 24px;            /* ← rounded rectangle */
+  position: relative;
+  z-index: 1;
+}
         .about-img-decoration {
           position: absolute;
           inset: -8px;

@@ -13,7 +13,7 @@ export default function Services() {
             <h2 className="section-title">My <span>Services</span></h2>
             <div className="divider" />
             <p className="section-subtitle">
-              End-to-end digital solutions designed to scale. From concept to deployment, I deliver products your users will love.
+              Comprehensive digital services crafted to accelerate your business growth and online success.
             </p>
           </div>
         </div>
