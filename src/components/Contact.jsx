@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { personalInfo, socialLinks } from '../data/config';
 import { useScrollReveal } from '../hooks';
+import emailjs from '@emailjs/browser';
 
 const INITIAL_FORM = {
   name: '', email: '', phone: '', company: '', subject: '', message: '',
@@ -76,41 +77,37 @@ export default function Contact() {
     if (errors[name]) setErrors(err => ({ ...err, [name]: '' }));
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    const errs = validate(form);
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
+ const onSubmit = async (e) => {
+  e.preventDefault();
+  const errs = validate(form);
+  if (Object.keys(errs).length > 0) {
+    setErrors(errs);
+    return;
+  }
 
-    setStatus('loading');
+  setStatus('loading');
 
-    try {
-      // Replace with your EmailJS credentials or Formspree endpoint
-      // Using Formspree as fallback demo (replace YOUR_FORM_ID)
-      const response = await fetch('https://formspree.io/f/xgojynlq', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          company: form.company,
-          subject: form.subject,
-          message: form.message,
-        }),
-      });
+  try {
+    await emailjs.send(
+      'service_8ommr6c',
+      'template_kfiseb8',
+      {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        company: form.company,
+        subject: form.subject,
+        message: form.message,
+      },
+      'f0MTrylNPkzKhYqFM'
+    );
 
-      // For demo purposes, simulate success after 1.5s
-      await new Promise(r => setTimeout(r, 1500));
-      setStatus('success');
-      setForm(INITIAL_FORM);
-    } catch {
-      setStatus('error');
-    }
-  };
-
+    setStatus('success');
+    setForm(INITIAL_FORM);
+  } catch {
+    setStatus('error');
+  }
+};
   return (
     <section id="contact" className="section contact-section" aria-label="Contact">
       <div className="container">
