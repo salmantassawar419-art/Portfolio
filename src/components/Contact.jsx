@@ -89,7 +89,7 @@ export default function Contact() {
     try {
       // Replace with your EmailJS credentials or Formspree endpoint
       // Using Formspree as fallback demo (replace YOUR_FORM_ID)
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/xgojynlq', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
